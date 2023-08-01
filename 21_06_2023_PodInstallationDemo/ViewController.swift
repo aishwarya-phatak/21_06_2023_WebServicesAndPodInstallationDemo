@@ -75,7 +75,6 @@ class ViewController: UIViewController {
         }
         dataTask.resume()
     }
-
 }
 
 //MARK : UITableViewDataSource
@@ -91,6 +90,8 @@ extension ViewController : UITableViewDataSource{
         postTableViewCell.postUserIdLabel.text = String(eachPostFetchedFromArray.userId)
         postTableViewCell.postIdLabel.text = String(eachPostFetchedFromArray.id)
         postTableViewCell.postTitleLabel.text = eachPostFetchedFromArray.title
+        
+        postTableViewCell.backgroundColor = .lightGray
         
         return postTableViewCell
     }
